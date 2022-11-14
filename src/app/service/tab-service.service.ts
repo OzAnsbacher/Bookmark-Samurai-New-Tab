@@ -17,6 +17,7 @@ export class TabService {
     return this.httpService.post('bookmark', bookmark).subscribe((res) => {
       console.log(res);
       window.top?.close();
+      window.close()
     });
   }
   public editBookmark(bookmark: BookmarkModule) {
@@ -24,6 +25,7 @@ export class TabService {
     return this.httpService.put('bookmark', bookmark).subscribe((res) => {
       console.log(res);
       window.top?.close();
+      window.close()
     });
   }
 }
