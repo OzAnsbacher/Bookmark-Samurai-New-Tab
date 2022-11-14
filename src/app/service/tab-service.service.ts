@@ -16,7 +16,7 @@ export class TabService {
   public addBookmark(bookmark: BookmarkModule) {
     return this.httpService.post('bookmark', bookmark).subscribe((res) => {
       console.log(res);
-      window.top?.close();
+      // window.top?.close();
       window.close()
     });
   }
@@ -24,7 +24,7 @@ export class TabService {
     console.log('edit', bookmark);
     return this.httpService.put('bookmark', bookmark).subscribe((res) => {
       console.log(res);
-      window.top?.close();
+      // window.top?.close();
       window.close()
     });
   }
