@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder ,  Validators  } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'new-tab';
+
 }
+
+
+// export class ProfileEditorComponent {
+//   profileForm = new FormGroup({
+//     firstName: new FormControl(''),
+//     lastName: new FormControl(''),
+//   });
+// }
