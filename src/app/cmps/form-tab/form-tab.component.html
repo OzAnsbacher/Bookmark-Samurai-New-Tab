@@ -1,5 +1,7 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
+    <p *ngIf="user.username">Hello {{user.username| titlecase  }},<br> You can add your bookmark -</p>
+
     <label for="name">Title:
         <input class="required" id="name" type="text" formControlName="name">
     </label>
@@ -9,9 +11,9 @@
     <label for="category">Category:
         <input id="category" type="text" formControlName="category">
     </label>
-<div class="btn">
+    <div class="btn">
 
-    <button type="submit" [disabled]="!profileForm.valid">✔ Add</button>
-    <button (click)="close()">✘ Cancel</button>
-</div>
+        <button type="submit" [disabled]="!profileForm.valid">✔ Add</button>
+        <button (click)="close()">✘ Cancel</button>
+    </div>
 </form>
