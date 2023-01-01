@@ -33,4 +33,9 @@ export class TabService {
       .putBookmark('bookmark', bookmark)
       .subscribe((res) => {});
   }
+  public updateBookmark(){
+    return this.httpService
+    .updateBookmark({notification: 'new'})
+    .subscribe(() => {});
+  }
 }

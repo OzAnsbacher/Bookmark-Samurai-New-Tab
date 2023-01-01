@@ -85,4 +85,8 @@ export class FormTabComponent implements OnInit {
   close() {
     window.close();
   }
+
+  send() {
+    this.tabService.updateBookmark();
+  }
 }
